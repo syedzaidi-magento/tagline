@@ -2,7 +2,9 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="product.info.main">
-            <block class="Magento\Catalog\Block\Product\View" name="custom.product.attribute" template="Company_Tagline::product/view/custom_attribute.phtml" after="product.info.name"/>
+<!--            <block class="Magento\Catalog\Block\Product\View" name="custom.product.attribute" template="Company_Tagline::product/view/custom_attribute.phtml" after="product.info.name"/>-->
+            <block class="Magento\Catalog\Block\Product\View" name="tagline_custom_product_attribute" template="Company_Tagline::tagline_custom_product_attribute.phtml"/>
         </referenceContainer>
+        <move element="tagline_custom_product_attribute" destination="product.info.main" after="page.main.title" />
     </body>
 </page>
