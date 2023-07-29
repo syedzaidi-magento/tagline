@@ -1,0 +1,17 @@
+<?php
+// Get the current product object
+$_product = $block->getProduct();
+
+// Replace 'custom_text_attribute' with the actual attribute code
+$customAttribute = $_product->getData('tagline_text_attribute');
+
+// Display the attribute value if it's not empty
+if ($customAttribute) {
+    ?>
+    <div class="product-attribute-custom-text">
+        <span class="label"><?php echo __('Custom Text Attribute:') ?></span>
+        <span class="value"><?php echo $customAttribute; ?></span>
+    </div>
+    <?php
+}
+?>
